@@ -1,891 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreLaser</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="icon" type="image/svg+xml" href="assets/corelase-footer.svg" />
+    <title>Dias Gomes Doceria</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/3b9ff962e8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
     <style>
-        .bg-custom-gradient {
-          background: linear-gradient(
-            to bottom,
-            #E20613 0%,
-            #DE0512 14.28%,
-            #D30512 28.56%,
-            #C10411 42.84%,
-            #A80310 57.12%,
-            #88020F 71.4%,
-            #60010D 85.68%,
-            #3E000C 100%
-          );
-        }
-        .bg-custom-gradient2 {
-      background: linear-gradient(
-        to bottom,
-        #3E000C 0%,
-        #60010D 14.28%,
-        #88020F 28.56%,
-        #A80310 42.84%,
-        #C10411 57.12%,
-        #D30512 71.4%,
-        #DE0512 85.68%,
-        #E20613 100%
-      );
-      position: relative;
-      overflow: hidden;
-    }
+      /* Custom Styles */
+      .hero {
+          position: relative;
+          height: 100vh;
+      }
 
+      .hero video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+      }
 
+      .hero-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          color: white;
+          padding: 0 20px;
+      }
 
-.bg-custom-gradient3::before {
-  content: "";
-  position: absolute;
-  inset: 0; 
-  background: url("assets/xbig2.png") no-repeat center/cover;
-  z-index: 0;
-}
-      </style>
+      .hero h1 {
+          font-size: 4rem;
+          font-weight: 800;
+          line-height: 1.2;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero p {
+          font-size: 1.5rem;
+          margin-top: 1rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero a {
+          margin-top: 2rem;
+          background-color: #eb9da4;
+          color: white;
+          padding: 14px 32px;
+          font-size: 1.2rem;
+          border-radius: 50px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-decoration: none;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .hero a:hover {
+          background-color: #eb9da4;
+          transform: scale(1.05);
+      }
+  </style>
 </head>
-<body>
+<body class="bg-[#f8f1e5] font-sans">
 
-  <header>
-
-
-    
-    
-    
-    
-    <div class="h-full relative hidden lg:block">
-      <video 
-        src="assets/-2134-499e-b71f-f68f14e3df77.mov" 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        class="relative w-full h-full object-cover">
+    <!-- Header -->
+    <section class="hero relative h-screen">
+      <!-- Video Background -->
+      <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+          <source src="assets/7525329-hd_1920_1080_25fps.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
       </video>
-      <div class="absolute top-0 left-0 w-full h-full bg-black opacity-30 "></div>
-    
-      <!-- Animação da seta -->
-      <div class="absolute left-[46%] bottom-56 transform -translate-x-1/2 animate-bounce hidden lg:block">
-        <svg class="w-32 h-32 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 21V3M5 14l7 7 7-7"></path>
-        </svg>
+  
+      <!-- Dark Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-1"></div>
+  
+      <!-- Hero Content -->
+      <div class="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6 z-10">
+          <h1 class="text-white text-4xl font-extrabold leading-tight ">Dias Gomes <span class="font-bold text-[#eb9da4]">Doceria</span></h1>
+          <p class="lg:text-xl text-xs leading-tight mt-4 text-shadow-md">Adoce seu dia com as delícias da nossa doceria artesanal. Criando momentos inesquecíveis!</p>
+          <a href="#produtos" class="inline-block mt-6 bg-[#eb9da4] text-white py-3 px-8 rounded-full text-lg ">Veja nossos produtos</a>
       </div>
-    </div>
-    
-    
+  </section>
 
-
-
-    <div class="lg:min-h-screen h-screen bg-[#ED2E39] relative overflow-hidden">
-      <div 
-        class="absolute lg:top-0 lg:right-0 w-full h-full bg-cover bg-no-repeat z-0 hidden lg:block" 
-        style="background-image: url('assets/xNew.png'); opacity: 0.7;">
+    <!-- Sobre Section -->
+    <section id="sobre" class="relative bg-gradient-to-r from-[#f8e8d4] via-[#f9dede] to-[#f8e8d4] py-24 overflow-hidden">
+      <!-- Background Animation -->
+      <div class="absolute inset-0">
+          <div class="w-64 h-64 bg-[#eb9da4] opacity-20 rounded-full blur-3xl absolute top-10 left-1/4 animate-pulse"></div>
+          <div class="w-96 h-96 bg-[#cbb46e] opacity-20 rounded-full blur-3xl absolute top-1/3 right-10 animate-bounce"></div>
       </div>
-      
-      <!-- Logo e Redes Sociais -->
-      <div class="relative flex justify-between items-center container mx-auto mt-6 z-10 px-4 sm:px-6">
-        <img src="assets/CoreLaser_logo.svg" alt="CoreLaser" class="w-32 sm:w-40 mx-auto lg:mb-0 lg:mx-0" />
-        <div class="space-x-2 flex sm:space-x-4 hidden lg:flex">
-          <a href="#" class="p-2 sm:p-3 rounded-full bg-[#E20613] hover:bg-red-500">
-            <img src="assets/tiktok_fill.svg" alt="TikTok" class="w-4 h-4 sm:w-5 sm:h-5" />
-          </a>
-          <a href="https://www.instagram.com/corelaser_/" class="p-2 sm:p-3 rounded-full bg-red-600 hover:bg-red-500">
-            <img src="assets/ins_fill.svg" alt="Instagram" class="w-4 h-4 sm:w-5 sm:h-5" />
-          </a>
-          <a href="#" class="p-2 sm:p-3 rounded-full bg-red-600 hover:bg-red-500">
-            <img src="assets/youtube_fill.svg" alt="YouTube" class="w-4 h-4 sm:w-5 sm:h-5" />
-          </a>
-        </div>
-      </div>
-      
-      <!-- Conteúdo Principal -->
-      <div class="container h-screen flex flex-col items-center justify-center max-w-3xl mx-auto px-6 lg:px-20 text-center relative z-20">
-        <div class="text-white z-10">
-          <h1 class="text-2xl lg:text-5xl font-extralight leading-tight kroosLight mb-6 lg:mb-0">
-            TECNOLOGIA, <span class="font-bold kroosItalicBold">ALTA PERFORMANCE</span> <br />
-            RESULTADOS <span class="font-bold kroosItalicBold">GARANTIDOS</span>
-          </h1>
-          <p class="mt-4 text-sm lg:text-lg font-bold kroosItalicBold">
-            Equipamentos avançados para laserterapia, ondas de choque e terapias regenerativas
-          </p>
-          <p class="mt-2 text-xs lg:text-sm kroos">
-            A CoreLaser combina inovação tecnológica com excelência clínica para oferecer dispositivos médicos de alta performance. Desde 2006, somos referência em soluções terapêuticas que otimizam tratamentos e entregam resultados superiores.
-          </p>
-        </div>
-    
-        <!-- Botões e Redes Sociais no Mobile -->
-        <div class="mt-6 flex flex-col gap-4 lg:hidden">
-          <a href="https://wa.me/5521997668895" target="_blank" class="bg-white text-red-700 border border-red-700 py-2 px-6 rounded-full font-semibold kroos hover:bg-red-100 transition">
-            Fale Conosco
-          </a>
-          <div class="flex justify-center space-x-4">
-            <a href="#" class="p-2 rounded-full bg-red-600 hover:bg-red-500">
-              <img src="assets/tiktok_fill.svg" alt="TikTok" class="w-4 h-4" />
-            </a>
-            <a href="https://www.instagram.com/corelaser_/" class="p-2 rounded-full bg-red-600 hover:bg-red-500">
-              <img src="assets/ins_fill.svg" alt="Instagram" class="w-4 h-4" />
-            </a>
-            <a href="#" class="p-2 rounded-full bg-red-600 hover:bg-red-500">
-              <img src="assets/youtube_fill.svg" alt="YouTube" class="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-    
-        <!-- Botões e Redes Sociais no Desktop -->
-        <div class="hidden mt-8 lg:flex gap-4 justify-center items-center">
-          <a href="https://wa.me/5521997668895" target="_blank" class="kroos bg-white text-red-700 border border-red-700 py-3 px-8 rounded-full font-semibold hover:bg-red-100 transition">
-            Fale Conosco
-          </a>
-          <a href="https://wa.me/5521997668895" target="_blank" class="flex items-center justify-center bg-[#2D2D2D] border border-red-700 p-3 rounded-full">
-            <img src="assets/ArrowUpRight.svg" alt="Download PDF" />
-          </a>
-          <div class="flex items-center gap-4">
-            <div class="flex items-center justify-center bg-white text-black rounded-full border border-red-700 p-3">
-              <a href="https://www.instagram.com/corelaser_/">
-                <img src="assets/instaBlack.png" class="w-5 h-5" />
+  
+      <div class="relative container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Texto com ícones e CTA -->
+          <div>
+              <h2 class="text-5xl font-extrabold text-[#eb9da4] mb-6 leading-tight">Sobre a Dias Gomes Doceria</h2>
+              <p class="text-xl text-gray-700 mb-6">
+                  Oferecemos mais do que doces: entregamos memórias e momentos especiais. Cada produto é criado com ingredientes selecionados e paixão, garantindo que você aproveite o melhor em cada mordida.
+              </p>
+  
+              <!-- Lista de Destaques -->
+              <ul class="mb-8">
+                  <li class="flex items-center mb-4">
+                      <svg class="w-6 h-6 text-[#cbb46e] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 0l3.09 6.26L20 7.27l-5 4.87L16.18 20 10 16.91 3.82 20 5 12.14 0 7.27l6.91-1.01L10 0z" />
+                      </svg>
+                      <span class="text-gray-700">Doces 100% artesanais</span>
+                  </li>
+                  <li class="flex items-center mb-4">
+                      <svg class="w-6 h-6 text-[#cbb46e] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 0l3.09 6.26L20 7.27l-5 4.87L16.18 20 10 16.91 3.82 20 5 12.14 0 7.27l6.91-1.01L10 0z" />
+                      </svg>
+                      <span class="text-gray-700">Ingredientes premium selecionados</span>
+                  </li>
+                  <li class="flex items-center mb-4">
+                      <svg class="w-6 h-6 text-[#cbb46e] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10 0l3.09 6.26L20 7.27l-5 4.87L16.18 20 10 16.91 3.82 20 5 12.14 0 7.27l6.91-1.01L10 0z" />
+                      </svg>
+                      <span class="text-gray-700">Personalização para eventos</span>
+                  </li>
+              </ul>
+  
+              <!-- Botão de Ação -->
+              <a href="#produtos" class="inline-block bg-[#eb9da4] text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-[#c995a4] transition duration-300">
+                  Veja nossos produtos
               </a>
-            </div>
-            <div>
-              <span class="text-white font-bold kroos">Nos siga no Instagram</span>
-              <p class="opacity-50 kroos">e acompanhe nosso trabalho</p>
-            </div>
           </div>
-        </div>
-      </div>
-      <div 
-        class="absolute bottom-0 -left-72 w-full h-1/2  bg-no-repeat z-0 lg:hidden" 
-        style="background-image: url('assets/xNew.png'); opacity: 0.7;">
-      </div>
-    </div>
-    
-</header>
-      
-
-<section class="relative min-h-screen flex text-white flex-col items-center justify-center bg-black ">
-  <div class="absolute top-10 ">
-    <img src="assets/linha-teste.png" alt="">
-  </div>
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('your-background-image-url.jpg'); opacity: 0.3;"></div>
-
-
-  <img src="assets/corelaserLogo-new.svg" alt="CoreLaser" class="h-8 mb-4 mt-32 lg:mb-10 mx-auto"> 
-  <div class="relative z-10 max-w-5xl mx-auto flex flex-col lg:flex-row items-center lg:items-start p-6 lg:p-12">
-      <div class="lg:w-1/2 mb-32 lg:mb-0 lg:mr-32">
-          <h2 class="text-3xl lg:text-5xl kroosItalicBold mb-4">POR QUE ESCOLHER A <span class="text-red-500">CORELASER</span>?</h2>
-          <ul class="space-y-6">
-              <li class="kroos">
-                  <h3 class="text-white kroosItalicBold mb-3">Tecnologia de Ponta:</h3>
-                  <p class="text-gray-400">Equipamentos como a Chelt e o Lux XP trazem alta intensidade e versatilidade com até 6 frequências de onda.</p>
-              </li>
-              <li>
-                  <h3 class="text-white kroosItalicBold mb-3">Financiamento Facilitado:</h3>
-                  <p class="text-gray-400">Parcelamento em até XX vezes.</p>
-              </li>
-              <li>
-                  <h3 class="text-white kroosItalicBold mb-3">Retorno Garantido:</h3>
-                  <p class="text-gray-400">Com apenas 6 atendimentos, você recupera o valor da parcela do equipamento.</p>
-              </li>
-              <li>
-                  <h3 class="text-white kroosItalicBold mb-3">Soluções Regenerativas Exclusivas:</h3>
-                  <p class="text-gray-400">Kits de sistema fechado de PRP (com e sem Hialurônico) e coleta de células mesenquimais, prontos para uso.</p>
-              </li>
-              <li>
-                  <h3 class="text-white kroosItalicBold mb-3">Suporte Completo:</h3>
-                  <p class="text-gray-400">Treinamento técnico, consultoria personalizada e garantia de qualidade.</p>
-              </li>
-          </ul>
-      </div>
-      <div class="lg:w-1/2 flex justify-center mx-auto mb-32">
+  
+          <!-- Imagem do Produto -->
           <div class="relative">
-              <video class="rounded-xl shadow-lg w-full" controls>
-                  <source src="https://s3-figma-videos-production-sig.figma.com/video/1343982015119693441/TEAM/f76b/675b/-4f48-44b9-a593-593c3139f80b?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=glNs875AIpQ1n-A3MzC28h6qzRz-RulVTc1s2yjVAM6LKMeiqUWG2qgw-R5kcrKNFAcZDKPIWUIXtg5uJXDmAxUZHgD13k62a87DYQLBbxPEYkj2eWwLL-~GBZdODaSl9ffGoWY9ocqU3STfmEor94a9WDrXnnwX8XPDSKkk~GaM7qkuixeyxTA8uIuF-yN9~03fCHBI8l4FnQrMKNjhpPCZmbQsvTtZyxoGNSwQM0wqx9-RlbX-2-Xe8ay5YGzCnG6mhhK~2WOehgSWbnmuBXGHfrIzTsXEGV9bll2x2d29GdsT6Rze2Jd8yIG7ShzSXT2mLkcPsdmPRSAO4WKmzA__" type="video/mp4">
-                  Seu navegador não suporta a tag de vídeo.
-              </video>
+              <img src="assets/produto2.jpg" alt="Produto" class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+              <!-- Texto na Imagem (opcional) -->
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent text-white text-center py-4 rounded-b-lg">
+                  <p class="text-lg font-semibold">Experimente o melhor da nossa doceria!</p>
+              </div>
           </div>
       </div>
-  </div>
+  </section>
+  
+  
 
-  <!-- Borda vermelha no fundo -->
-  <div class="absolute bottom-10 ">
-    <img src="assets/linha-teste-baixo.png" alt="">
-  </div>
-</section>
-      
-
-      <section class="bg-white p-16 text-center">
-        <h1 class="uppercase text-[#3E000C] text-2xl kroosItalicBold">
-            Equipamentos confiados por <span class="font-bold text-[#E20613]">gigantes</span>
-        </h1>
-        <div class="mt-16">
-            <div class="logos-slider hidden lg:flex justify-center items-center gap-4 space-x-20">
-                <img src="assets/flamengo.svg" alt="flamengo">
-                <img src="assets/brasil_oli.png" alt="brasil">
-                <img src="assets/furacao.svg" alt="furacao">
-                <img src="assets/cbf.svg" alt="cbf">
+    <!-- Produtos Section -->
+    <section id="produtos" class="bg-[#ffffff] py-24">
+      <div class="container mx-auto text-center">
+          <h2 class="text-4xl font-semibold text-[#cbb46e] mb-6">Nossos Produtos</h2>
+          <p class="text-xl text-gray-700 mb-12">Delicie-se com nossos doces exclusivos!</p>
+  
+          <!-- Carrossel -->
+          <div class="slick-slider">
+            <!-- Produto 1 -->
+            <div class="bg-[#f8f1e5] rounded-2xl shadow-lg p-8 ">
+              <img src="assets/buqueChocolate.jpeg" alt="Buquê de Chocolate" class="mx-auto mb-6 rounded-xl shadow-md">
+              <p class="mt-4 text-gray-600">Declare seu amor de forma doce e única!</p>
             </div>
-    
-            <div class="carousel-different lg:hidden">
-                <img src="assets/flamengo.svg" alt="flamengo">
-                <img src="assets/brasil_oli.png" alt="brasil">
-                <img src="assets/furacao.svg" alt="furacao">
-                <img src="assets/cbf.svg" alt="cbf">
+            <!-- Produto 2 -->
+            <div class="bg-[#f8f1e5] rounded-2xl shadow-lg p-8 ">
+              <img src="assets/cestasPersonalizada.jpeg" alt="Cestas de Chocolate" class="mx-auto mb-6 rounded-xl shadow-md">
+              <p class="mt-4 text-gray-600">Recheadas de delícias para encantar e surpreender.</p>
             </div>
-        </div>
-    </section>
-    
-
-    <section class="relative min-h-screen bg-gradient-to-b from-red-900 to-black text-white py-16 overflow-hidden">
-    
-      <div class="relative z-10 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold leading-tight kroos">
-          NOSSOS PRODUTOS <br> EM <span class="text-red-500">DESTAQUE</span>
-        </h2>
-        <a href="https://wa.me/5521997668895" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-red-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-red-600 transition">
-          Saiba Mais
-          <span class="material-icons">arrow_forward</span>
-        </a>
-      </div>
-    
-      <div class="relative mt-12 container mx-auto hidden lg:block">
-        <div class="carousel mx-auto flex justify-center items-center">
-          <!-- Primeiro produto -->
-          <div class="flex flex-col container items-center">
-            <div class="relative flex justify-center items-center">
-              <!-- Imagem para desktop -->
-              <img src="assets/teste-carrossel.png" 
-                   alt="Produto 1 desktop" 
-                   class="mx-auto" />
-              
+            <!-- Produto 3 -->
+            <div class="bg-[#f8f1e5] rounded-2xl shadow-lg p-8 ">
+              <img src="assets/produto3.jpeg" alt="Doces Artesanais" class="mx-auto mb-6 rounded-xl shadow-md">
+              <p class="mt-4 text-gray-600">Feitos com carinho para adoçar seus momentos especiais.</p>
             </div>
-          </div>
-          <!-- Segundo produto -->
-          <div class="flex flex-col items-center">
-            <div class="relative flex justify-center items-center w-full">
-              <!-- Imagem para desktop -->
-              <img src="assets/teste-carrossel2.png" 
-                   alt="Produto 2 desktop" 
-                   class="mx-auto">
-              
+            <!-- Produto 4 -->
+            <div class="bg-[#f8f1e5] rounded-2xl shadow-lg p-8 ">
+              <img src="assets/produto4.jpeg" alt="Mini Bolos" class="mx-auto mb-6 rounded-xl shadow-md">
+              <p class="mt-4 text-gray-600">Perfeitos para celebrar pequenos momentos!</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="relative mt-12 container mx-auto lg:hidden">
-        <div class="carousel mx-auto flex justify-center items-center  ">
-          <!-- Primeiro produto -->
-          <div class="flex flex-col container items-center">
-            <div class="relative flex justify-center items-center">
-              <!-- Imagem para desktop -->
-              <img src="assets/product1-mobile.png" 
-                   alt="Produto 1 mobile" 
-                   class="mx-auto" />
-              
+            <!-- Produto 5 -->
+            <div class="bg-[#f8f1e5] rounded-2xl shadow-lg p-8 ">
+              <img src="assets/produto5.jpeg" alt="Bombons Recheados" class="mx-auto mb-6 rounded-xl shadow-md">
+              <p class="mt-4 text-gray-600">Sabores únicos que surpreendem o paladar.</p>
             </div>
-          </div>
-          <!-- Segundo produto -->
-          <div class="flex flex-col items-center">
-            <div class="relative flex justify-center items-center w-full">
-              <!-- Imagem para desktop -->
-              <img src="assets/product2-mobile.png" 
-                   alt="Produto 2 mobile" 
-                   class="mx-auto">
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-    
-      <div class="text-center">
-        <img src="assets/CoreLaser_logo.svg" alt="CoreLaser+" class="mx-auto">
-      </div>
-    </section>
-    
-    
-      
-      
-    <section class="bg-white relative p-8 md:p-16 items-center justify-center">
-      <div class="absolute top-10 left-1/2 transform -translate-x-1/2 container flex items-center justify-center hidden lg:block">
-        <img src="assets/linha-teste.png" alt="" class="w-full" />
-      </div>
-      <div class="text-center  relative">
-        <h2 class="text-3xl text-black md:text-5xl font-semibold  pt-8 md:pt-16 leading-snug kroos">
-          <span class="font-bold text-[#E10613] kroosItalicBold">Veja</span> como estamos <br /> fazendo <span class="font-bold text-[#E10613] kroosItalicBold">a diferença</span>
-        </h2>
-        
-        <div class="relative mt-8 md:mt-16">
-          <div class="relative w-full mx-auto max-w-[400px] h-[600px] md:max-w-3xl md:h-auto">
-            <video 
-              id="videoPlayer" 
-              src="https://s3-figma-videos-production-sig.figma.com/video/1343982015119693441/TEAM/90d0/61a6/-f770-4782-acda-491c1df1e11f?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=etk8QRIeJGhfCo2eusQF-gBfgzaXVRMOmJkoqnWxHLWnQuW~ehWz1mm~jZN~KuJ4AQxxajmFEibuRKWByPPawVaHMfegq1H91uG8mBJIFDcCruRxAKvwO2gdH24lrKte15uu2m3uWnLua3S3Vb0D8haNAGa2bMscQjfEz5kC371iRwGFQLv1nahrqXzIMbqNMC6WAV8EiefBD6OQGNevT~KR9vekvcOnKbt~YoULExIGs93dk9REFWdXhRDNN7uHuIDNbHjJE-GtIdj8GsxnrXi2pExEXs9j9D10sL9TatE5Eh8dJj8IOdyfIrADU1kJ4vzXjy8xUcjsykpvxKJaTQ__" 
-              class="absolute w-full h-full object-cover rounded-lg shadow-lg lg:relative" 
-              muted
-            ></video>
           </div>
           
-          <button 
-            id="playButton" 
-            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full cursor-pointer w-16 h-16 md:w-20 md:h-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l14 9-14 9V3z"/>
-            </svg>
-          </button>
-        </div>
       </div>
-      <img  src="assets/coreLaser-Branco.svg" class="mx-auto lg:mt-32 mt-32"/>
-      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 container flex items-center justify-center hidden lg:block">
-        <img src="assets/linha-teste-baixo.png" alt="" class="w-full" />
-      </div>
-    </section>
+  </section>
+  
+
+    <!-- Testemunhos Section -->
     
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-24 bg-white">
+      <div class="container mx-auto text-center px-6">
+        <!-- Título -->
+        <h2 class="text-4xl font-semibold text-[#cbb46e]">Entre em Contato</h2>
+        <p class="mt-6 text-lg text-gray-600">
+          Estamos prontos para atender seu pedido! Fale conosco através do WhatsApp ou siga-nos no Instagram.
+        </p>
     
-      
-
-      <section class="bg-white p-16">
-        <h1 class="uppercase lg:text-4xl text-2xl italic text-center kroos">
-            <span class=" text-[#E20613] font-bold kroosItalicBold">profissionais</span> que <br />
-            transformaram seus <span class="text-[#E20613] font-bold kroosItalicBold">resultados</span>
-        </h1>
-    
-        <div class="mt-32 relative">
-            <div class="carousel max-w-lg mx-auto">
-                <div>
-                    <h2>Alberto Silva</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu magna massa. Mauris id risus non sapien euismod molestie. Fusce nisl sapien, semper nec euismod sit amet.</p>
-                </div>
-                <div>
-                    <h2>Maria Oliveira</h2>
-                    <p>Vestibulum a mauris ac metus auctor euismod non non nulla. Morbi scelerisque nisl eget justo vestibulum pretium.</p>
-                </div>
-                <div>
-                    <h2>João Pereira</h2>
-                    <p>Aliquam erat volutpat. Sed lacinia arcu ut quam elementum, nec tincidunt orci facilisis.</p>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <section class="bg-[#ED2E39]  relative overflow-hidden text-white py-16 px-4 z-50">
-      <div 
-      class="absolute top-0 left-0 w-1/2 h-full bg-cover bg-no-repeat z-0 hidden lg:block" 
-      style="background-image: url('assets/xNew.png'); opacity: 0.7;">
-    </div>
-      <div >
-        <img src="assets/corelaser-allwhite.svg" alt="" class="mx-auto text-center mb-32">
-      </div>
-      <h2 class="text-center text-4xl font-bold mb-8 kroos">
-        O <span class="text-black kroosItalicBold">FUTURO</span> DE SUA CLÍNICA <br />
-        COM <span class="text-black kroosItalicBold">CONDIÇÕES EXCLUSIVAS</span>
-      </h2>
-    
-      <div class="flex flex-col lg:flex-row justify-center items-center gap-8 mb-8 relative z-20">
-        <div class="bg-white text-black rounded-lg shadow-lg p-6 w-80 min-h-[220px] flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-semibold mb-4 kroosItalicBold">Recupere o investimento rapidamente:</h3>
-            <p class="text-sm mb-4 kroos">
-              Em apenas X atendimentos, o valor da parcela do equipamento está pago.
-            </p>
-          </div>
-          <a href="https://wa.me/5521997668895" target="_blank">
-
-            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 kroosItalicBold">
-              Saiba mais
-            </button>
+        <!-- Botões -->
+        <div class="mt-12 flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6">
+          <!-- Instagram Link -->
+          <a href="https://www.instagram.com/diasgomesdoceria" target="_blank" 
+             class="flex items-center bg-[#eb9da4] text-white py-4 px-8 rounded-full shadow-lg  transition-transform transform hover:scale-105 w-full sm:w-auto justify-center">
+            <i class="fa fa-instagram text-2xl mr-4"></i>
+            <span class="text-lg font-medium">Siga no Instagram</span>
           </a>
-        </div>
     
-        <div class="bg-white text-black rounded-lg shadow-lg p-6 w-80 min-h-[220px] flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-semibold mb-4 kroosItalicBold">Financiamento facilitado:</h3>
-            <p class="text-sm mb-4 kroos">
-              Parcelamento em até XX vezes, com condições especiais.
-            </p>
-          </div>
-          <a href="https://wa.me/5521997668895" target="_blank">
-
-            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 kroosItalicBold">
-              Saiba mais
-            </button>
+          <!-- WhatsApp Link -->
+          <a href="https://wa.me/5511988172953" target="_blank" 
+             class="flex items-center bg-[#eb9da4] text-white py-4 px-8 rounded-full shadow-lg  transition-transform transform hover:scale-105 w-full sm:w-auto justify-center">
+            <i class="fa fa-whatsapp text-2xl mr-4"></i>
+            <span class="text-lg font-medium">Fale no WhatsApp</span>
           </a>
         </div>
       </div>
-    
-      <div class="text-center">
-        <a href="https://wa.me/5521997668895" target="_blank">
-          <button  class="kroosItalicBold bg-black  px-6 py-2 font-semibold rounded-full shadow-md  flex items-center gap-2 mx-auto">
-            Fale Conosco
-            <a  class="flex items-center justify-center bg-[#1C1C1C] border border-black p-1 rounded-full">
-              <img src="assets/ArrowUpRight.svg" alt="Download PDF" />
-          </a>
-          </button>
-        </a>
-      </div>
-      <div 
-        class="absolute bottom-0 -left-0 w-full h-1/2  bg-no-repeat z-0 lg:hidden" 
-        style="background-image: url('assets/xNew.png'); opacity: 0.7;">
-      </div>
     </section>
     
     
 
-    <section class="relative  bg-black  py-16 px-4 text-white ">
-  <div class="text-center z-50">
-    <h2 class="lg:text-5xl text-2xl font-bold uppercase kroos">
-      <span class="text-[#E20613] kroosItalicBold"> Benefícios</span> <br /> exclusivos para <span class="text-[#E20613] kroosItalicBold">você</span>
-    </h2>
-  </div>
-
-  <div class="mt-12 relative z-10">
-    <div class="carousel-different2 flex gap-4 mx-auto justify-center items-center">
-      <div class="bg-white text-black p-6 rounded-lg shadow-md flex flex-col justify-center items-center min-w-[250px] h-[190px]">
-        <img src="assets/box.svg" alt="Ícone 1" class="mb-4 mx-auto" />
-        <p class="text-center text-sm kroosItalicBold">
-          Financiamento facilitado
-        </p>
-      </div>
-  
-      <div class="bg-white text-black p-6 rounded-lg shadow-md flex flex-col justify-center items-center min-w-[250px] h-[190px]">
-        <img src="assets/money.svg" alt="Ícone 2" class="mb-4 mx-auto" />
-        <p class="text-center text-sm kroosItalicBold">
-          35 opções de equipamentos para você escolher
-        </p>
-      </div>
-  
-      <div class="bg-white text-black p-6 rounded-lg shadow-md flex flex-col justify-center items-center min-w-[250px] h-[190px]">
-        <img src="assets/selo.svg" alt="Ícone 3" class="mb-4 mx-auto" />
-        <p class="text-center text-sm kroosItalicBold">
-          Segurança e eficácia comprovadas
-        </p>
-      </div>
-  
-      <div class="bg-white text-black p-6 rounded-lg shadow-md flex flex-col justify-center items-center min-w-[250px] h-[190px]">
-        <img src="assets/hand.svg" alt="Ícone 4" class="mb-4 mx-auto" />
-        <p class="text-center text-sm kroosItalicBold">
-          Recupere seu investimento com rapidez e segurança
-        </p>
-      </div>
-  
-      <div class="bg-white text-black p-6 rounded-lg shadow-md flex flex-col justify-center items-center min-w-[250px] h-[190px]">
-        <img src="assets/talking.svg" alt="Ícone 5" class="mb-4 mx-auto" />
-        <p class="text-center text-sm kroosItalicBold">
-          Treinamento individualizado
-        </p>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
-
-<section class="relative bg-white py-16">
-  <div 
-    class="absolute top-0 left-0 w-1/2 h-[90%] bg-cover bg-no-repeat z-0"
-    style="background-image: url('assets/x-vermelho-fim.png');">
-  </div>
-  
-  <div class="relative z-10 lg:max-w-4xl max-w-sm mx-auto">
-    <img src="assets/corelaser-vermelhoepretp.png" class="mx-auto w-1/2 lg:w-auto lg:mb-20 mb-32 relative" alt="">
-    
-    <!-- Formulário -->
-    <div 
-      class="bg-white text-black p-8 lg:p-16 rounded-lg shadow-2xl relative -mt-16 lg:mt-10 z-20 "
-      style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);"
-    >
-      <h3 class="text-center text-red-600 text-2xl kroosItalicBold uppercase mb-6">
-        Descubra o equipamento ideal para suas necessidades
-      </h3>
-      <form id="emailForm">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Nome Completo -->
-          <input 
-            type="text" 
-            id="name" 
-            placeholder="Nome completo" 
-            class="border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500" 
-          />
-          
-          <!-- E-mail -->
-          <input 
-            type="email" 
-            id="email" 
-            placeholder="E-mail" 
-            class="border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500" 
-          />
-          
-          <!-- Área de Atuação -->
-          <input 
-            type="text" 
-            id="area" 
-            placeholder="Área de atuação" 
-            class="border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500" 
-          />
-          
-          <!-- Telefone -->
-          <div class="flex gap-4 items-center">
-            <input 
-              type="text" 
-              id="phoneDDD" 
-              placeholder="DDD" 
-              class="border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 w-20" 
-            />
-            <input 
-              type="text" 
-              id="phone" 
-              placeholder="Telefone" 
-              class="border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 flex-1" 
-            />
-          </div>
-          
-          <!-- Comentário ou Dúvida -->
-          <textarea 
-            id="message" 
-            placeholder="Comentário ou dúvida (opcional)" 
-            class="border border-gray-300 p-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 col-span-1 sm:col-span-2 resize-none" 
-            rows="4"
-          ></textarea>
+    <!-- Footer -->
+    <footer class="bg-[#eb9da4] text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Dias Gomes Doceria. Todos os direitos reservados.</p>
         </div>
-        
-        <!-- Botão de Enviar -->
-        <div class="mt-6 text-center">
-          <button 
-            type="submit" 
-            class="bg-red-600 text-white py-3 px-8 rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500 kroosItalicBold"
-          >
-            Quero Minha Demonstração
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-
-<footer class="bg-white text-black py-16">
-  <div class=" mx-auto px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-5xl font-bold text-left kroos">
-        Destaque-se com a Tecnologia <span class="text-red-600 kroosItalicBold">CoreLaser!</span>
-      </h2>
-      <p class="text-lg md:text-2xl mt-4 text-left kroos">
-        Não perca tempo. Eleve o padrão de atendimento em sua clínica ou hospital agora mesmo.
-      </p>
-      <p class="mt-6 text-lg md:text-3xl font-bold text-left kroosItalicBold">
-        Fale conosco: <span class=" kroos">(21) 9 9766-8895</span> |
-        <a href="mailto:atendimento@corelaser.com.br" class=" underline kroos">
-          atendimento@corelaser.com.br
-        </a>
-      </p>
-      <hr class="border-t border-gray-600 mt-8">
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div class="text-center md:text-left">
-        <img src="assets/logoFooterPreto.svg" alt="" class="mx-auto lg:mx-0">
-        <p class="text-lg mt-4">
-          Tecnologia em saúde. Precisão em resultados.
-        </p>
-      </div>
-
-      <div class="text-center md:text-left hidden lg:block">
-        <h3 class="text-2xl font-bold">Menu</h3>
-        <ul class="mt-4 space-y-3">
-          <li><a href="#" class="text-lg hover:underline">Início</a></li>
-          <li><a href="#" class="text-lg hover:underline">Diferenciais</a></li>
-          <li><a href="#" class="text-lg hover:underline">Tecnologia</a></li>
-          <li><a href="#" class="text-lg hover:underline">Preço Especial</a></li>
-        </ul>
-      </div>
-
-      <div class="text-center md:text-left">
-        <h3 class="text-2xl font-bold">Social Links</h3>
-        <ul class="mt-4 space-y-3">
-          <li><a href="https://www.instagram.com/corelaser_/" class="text-lg hover:underline">Instagram</a></li>
-          <li><a href="https://www.facebook.com/people/Corelaser_/100095493813173/" class="text-lg hover:underline">Facebook</a></li>
-          <li><a href="#" class="text-lg hover:underline">TikTok</a></li>
-          <li><a href="#" class="text-lg hover:underline">YouTube</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-  <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-    <h2 id="popup-title" class="text-lg font-bold mb-2">Título</h2>
-    <p id="popup-message" class="text-sm mb-4">Mensagem</p>
-    <button
-      id="popup-close"
-      class="bg-red-500 text-white py-1 px-4 rounded hover:bg-red-600 transition"
-    >
-      Fechar
-    </button>
-  </div>
-</div>
-
-<div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-  <div class="loader border-t-4 border-red-500 rounded-full w-12 h-12"></div>
-</div>
+    </footer>
 
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-          $('.slick-slider').slick({
-            dots: true, 
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            fade: true, 
-            autoplay: true, 
-            autoplaySpeed: 3000
-          });
-        });
-      </script>
-
-      <script>
-  const videoPlayer = document.getElementById('videoPlayer');
-  const playButton = document.getElementById('playButton');
-  
-  playButton.addEventListener('click', function() {
-    if (videoPlayer.paused) {
-      videoPlayer.play();  
-      playButton.style.display = 'none';  
-    } else {
-      videoPlayer.pause();  
-      playButton.style.display = 'flex';  
-    }
-  });
-
-  videoPlayer.addEventListener('pause', function() {
-    playButton.style.display = 'flex';  
-  });
-
-  videoPlayer.addEventListener('play', function() {
-    playButton.style.display = 'none';  
-  });
-</script>
 <script>
   $(document).ready(function () {
-    if ($(window).width() < 1024) {
-        $('.logos-slider-mobile').slick({
-            slidesToShow: 2, 
-            slidesToScroll: 1, 
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: false,
-            dots: true, 
-            responsive: [
-                {
-                    breakpoint: 768, 
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
-        });
-    }
-});
-</script>
-<script>$(document).ready(function () {
-  $('.carousel').slick({
-    slidesToShow: 1, 
-    slidesToScroll: 1, 
-    autoplay: true, 
-    autoplaySpeed: 3000, 
-    arrows: false, 
-    dots: true, 
-    prevArrow: '<button class="absolute left-4 md:left-12 bg-white text-black rounded-full p-2 shadow hover:bg-gray-300 z-20"><span class="material-icons">chevron_left</span></button>',
-    nextArrow: '<button class="absolute right-4 md:right-12 bg-white text-black rounded-full p-2 shadow hover:bg-gray-300 z-20"><span class="material-icons">chevron_right</span></button>',
-    responsive: [
-      {
-        breakpoint: 768, 
-        settings: {
-          dots: true, 
-          arrows: false, 
-        }
-      }
-    ]
-  });
-});
-</script>
-
-<script>
-$('.carousel-different').slick({
-  dots: false,
-  arrows: false,
-            centerMode:true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 4, 
-            cssEase: 'ease',
-            autoplay: true,
-            autoplaySpeed: 2000,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 768, 
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }
-            ]
-});
-
-
-</script>
-<script>
-  $('.carousel-different2').slick({
-    dots: false,
-    arrows: false,
-    centerMode: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4, 
-    cssEase: 'ease',
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024, 
-        settings: {
+      $('.slick-slider').slick({
+          infinite: true,
           slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 768, 
-        settings: {
-          slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: false,  // Remove o centro para uma exibição mais ajustada no mobile
-        }
-      }
-    ]
+          autoplay: true,
+          autoplaySpeed: 3000,
+          arrows: false,
+          dots: false,
+          responsive: [
+              {
+                  breakpoint: 1024,
+                  settings: {
+                      slidesToShow: 2,
+                  }
+              },
+              {
+                  breakpoint: 768,
+                  settings: {
+                      slidesToShow: 1,
+                  }
+              }
+          ]
+      });
   });
 </script>
-
-<script>
-document.getElementById("emailForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const area = document.getElementById("area").value.trim();
-  const phoneDDD = document.getElementById("phoneDDD").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  const phoneFormatted = `${phoneDDD} ${phone}`;
-
-  showLoading(); // Mostra o spinner
-
-  try {
-    const response = await fetch("https://backend-core-218t.onrender.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        area,
-        phone: phoneFormatted,
-        message,
-      }),
-    });
-
-    hideLoading(); // Esconde o spinner
-
-    // Verifica o status da resposta
-    if (response.ok) {
-      showPopup("Sucesso", "E-mail enviado com sucesso!");
-      document.getElementById("emailForm").reset();
-    } else {
-      const errorData = await response.json();
-      showPopup("Erro", errorData.message || "Erro ao enviar o e-mail. Tente novamente.");
-    }
-  } catch (error) {
-    hideLoading(); // Esconde o spinner
-    showPopup("Erro", "Erro ao se conectar ao servidor.");
-    console.error(error);
-  }
-});
-
-
-</script>
-
-<script>
-  const phoneInput = document.getElementById("phone");
-
-  phoneInput.addEventListener("input", (e) => {
-    let value = e.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos.
-    if (value.length > 9) value = value.slice(0, 9); // Limita o número de dígitos a 9.
-
-    // Formata como XXXXX-XXXX ou XXXX-XXXX
-    if (value.length > 4) {
-      value = value.replace(/(\d{4})(\d+)/, "$1-$2");
-    }
-
-    e.target.value = value;
-  });
-</script>
-
-<script>
-  function showPopup(title, message) {
-  const popup = document.getElementById("popup");
-  const popupTitle = document.getElementById("popup-title");
-  const popupMessage = document.getElementById("popup-message");
-
-  popupTitle.textContent = title;
-  popupMessage.textContent = message;
-
-  popup.classList.add("show");
-}
-
-function closePopup() {
-  const popup = document.getElementById("popup");
-  popup.classList.remove("show");
-}
-
-// Adiciona evento de fechar ao botão.
-document.getElementById("popup-close").addEventListener("click", closePopup);
-
-</script>
-
-<script>
-  function showLoading() {
-  const spinner = document.getElementById("loading-spinner");
-  spinner.classList.add("show");
-}
-
-function hideLoading() {
-  const spinner = document.getElementById("loading-spinner");
-  spinner.classList.remove("show");
-}
-
-</script>
-
 
 </body>
 </html>

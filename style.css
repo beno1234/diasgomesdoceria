@@ -32,12 +32,16 @@
   font-style: normal; /* Corrigido de italic para normal */
 }
 
-.carousel-different .slick-slide {
+.slick-slide {
   margin: 0 10px;
 }
-.carousel-different2 .slick-slide {
-  margin: 0 10px;
+
+.slick-slider img {
+  height: 500px; /* Ajuste a altura conforme necessário */
+  width: auto; /* Preserva a proporção */
+  object-fit: cover; /* Garante que as imagens se ajustem bem ao espaço */
 }
+
 .kroosItalic {
   font-family: "kroosItalic";
   font-style: italic;
